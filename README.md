@@ -1,6 +1,6 @@
 # A Quarkus template on Gitpod
 
-This is a Quarkus template configurated with the Quarkus CLI.
+This is a [Quarkus](https://quarkus.io/) template configurated with the [Quarkus CLI](https://quarkus.io/guides/cli-tooling).
 
 ## Next Steps
 
