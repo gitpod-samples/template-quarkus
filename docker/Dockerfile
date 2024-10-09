@@ -12,9 +12,10 @@ RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && \
     rm -rf $HOME/.sdkman/tmp/* "
 
 # install jbang 
-RUN bash -c '$HOME/.sdkman/candidates/jbang/current/bin/jbang --version'
-
-RUN bash -c '$HOME/.sdkman/candidates/jbang/current/bin/jbang trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/'
+RUN bash -c '$HOME/.sdkman/candidates/jbang/current/bin/jbang --version' && bash -c '$HOME/.sdkman/candidates/jbang/current/bin/jbang trust add https://repo1.maven.org/maven2/io/quarkus/quarkus-cli/'
 
 # install quarkus cli
 RUN bash -c '$HOME/.sdkman/candidates/jbang/current/bin/jbang app install --fresh --force quarkus@quarkusio'
+
+# Configure JDK
+RUN sdk install java $JAVA_VERSION && sdk use java $JAVA_VERSION && 
