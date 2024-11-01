@@ -1,7 +1,7 @@
-FROM gitpod/workspace-java-17
+FROM gitpod/workspace-java-21
 USER gitpod
 
-ARG JAVA_VERSION="17.0.6-tem"
+ARG JAVA_VERSION="21.0.5-tem"
 
 # install sdkman
 RUN curl -s "https://get.sdkman.io" | bash
